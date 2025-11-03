@@ -4,10 +4,9 @@
 #nparticipants=$1
 nparticipants=12
 
-mdkir dataset
+mkdir -p dataset
 
-for p in $(seq 1 $nparticipants); do
-    mkdir -p dataset/sub-$p/data
+for p in $(seq -w 1 $nparticipants); do
     mkdir -p dataset/sub-$p/beh
 done
 
